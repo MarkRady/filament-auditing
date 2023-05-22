@@ -22,7 +22,7 @@ class AuditsRelationManager extends RelationManager
 
     public static function canViewForRecord(Model $ownerRecord): bool
     {
-        return auth()->user()->can('audit', $ownerRecord);
+        return auth()->user()->can('audit_package', $ownerRecord);
     }
 
     public static function getTitle(): string
